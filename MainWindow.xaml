@@ -13,20 +13,20 @@
                 <GradientStop Color="#FFB0E9F0" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="btnOpen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="88" Content="開啟檔案" FontSize="16"/>
-        <Button x:Name="btnSave" HorizontalAlignment="Left" Margin="103,10,0,0" VerticalAlignment="Top" Height="33" Width="88" Content="存檔" FontSize="16"/>
-        <Button x:Name="btnBold" Content="B" HorizontalAlignment="Left" Margin="462,9,0,0" VerticalAlignment="Top" Height="35" Width="35" FontSize="16" FontFamily="Blackadder ITC"/>
-        <Button x:Name="btnItalic" Content="I" HorizontalAlignment="Left" Margin="502,9,0,0" VerticalAlignment="Top" Height="35" Width="35" FontFamily="Blackadder ITC" FontStyle="Italic"/>
-        <Button x:Name="btnUnderline" Content="U" HorizontalAlignment="Left" Margin="542,9,0,0" VerticalAlignment="Top" Height="35" Width="35" FontFamily="Blackadder ITC" FontSize="16"/>
-        <RichTextBox x:Name="rtbText" HorizontalAlignment="Center" Height="363" Margin="0,62,0,0" VerticalAlignment="Top" Width="780">
+        <Button x:Name="btnOpen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="88" Content="開啟檔案" FontSize="16" Click="btnOpen_Click"/>
+        <Button x:Name="btnSave" HorizontalAlignment="Left" Margin="103,10,0,0" VerticalAlignment="Top" Height="33" Width="88" Content="存檔" FontSize="16" Click="btnSave_Click"/>
+        <Button x:Name="btnBold" Content="B" HorizontalAlignment="Left" Margin="462,9,0,0" VerticalAlignment="Top" Height="35" Width="35" FontSize="16" FontFamily="Blackadder ITC" Click="btnBold_Click"/>
+        <Button x:Name="btnItalic" Content="I" HorizontalAlignment="Left" Margin="502,9,0,0" VerticalAlignment="Top" Height="35" Width="35" FontFamily="Blackadder ITC" FontStyle="Italic" Click="btnItalic_Click"/>
+        <Button x:Name="btnUnderline" Content="U" HorizontalAlignment="Left" Margin="542,9,0,0" VerticalAlignment="Top" Height="35" Width="35" FontFamily="Blackadder ITC" FontSize="16" Click="btnUnderline_Click"/>
+        <RichTextBox x:Name="rtbText" HorizontalAlignment="Center" Height="363" Margin="0,62,0,0" VerticalAlignment="Top" Width="780" SelectionChanged="rtbText_SelectionChanged">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="RichTextBox"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <ComboBox x:Name="cmbFontFamily" HorizontalAlignment="Left" Height="19" Margin="210,17,0,0" VerticalAlignment="Top" Width="153"/>
-        <ComboBox x:Name="cmbFontSize" HorizontalAlignment="Left" Height="19" Margin="377,17,0,0" VerticalAlignment="Top" Width="70"/>
+        <ComboBox x:Name="cmbFontFamily" HorizontalAlignment="Left" Height="19" Margin="210,17,0,0" VerticalAlignment="Top" Width="153" SelectionChanged="cmbFontFamily_SelectionChanged"/>
+        <ComboBox x:Name="cmbFontSize" HorizontalAlignment="Left" Height="19" Margin="377,17,0,0" VerticalAlignment="Top" Width="70" SelectionChanged="cmbFontSize_SelectionChanged"/>
 
     </Grid>
 </Window>
